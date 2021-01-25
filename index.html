@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Geolocation Tracker</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+
+
+
+<button onclick="getLocation()">Get Location</button>
+
+<h1 id="demo"></h1>
+
+<script>
+var x = document.getElementById("demo");
+var clicks = 0;
+function getLocation() {
+  clicks++
+  if(clicks==1){
+    alert("You have to allow the browser to get access to location by this website.","");
+  }
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>

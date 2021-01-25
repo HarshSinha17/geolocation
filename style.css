@@ -1,0 +1,18 @@
+body{
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+button{
+  height: 80px;
+width: 200px;
+font-size: 30px;
+background-color: transparent;
+color: white;
+border: 1px solid aqua;
+outline: none;
+border-radius: 10px;
+}
+h1{
+  text-shadow: 0px 0px 10px aqua;
+}
